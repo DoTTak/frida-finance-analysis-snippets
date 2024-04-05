@@ -16,3 +16,18 @@ PackageManager.getInstalledApplications.implementation = function (a) {
     }
     return ArrayList;
 };
+
+PackageManager.getPackageInfo.overloads[1].implementation = function (a, b) {
+    if (ROOTING_PACKAGES.indexOf(a) > -1) {
+        a = "HAS_NO_PACKASGE";
+    }
+    return this.getPackageInfo(a, b)
+};
+
+PackageManager.getApplicationInfo.overloads[0].implementation = function (a, b) {
+    if (ROOTING_PACKAGES.indexOf(a) > -1) {
+        a = "HAS_NO_PACKASGE";
+    }
+    var retval = this.getApplicationInfo(a, b);
+    return retval
+};
