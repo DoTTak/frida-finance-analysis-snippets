@@ -25,13 +25,13 @@ Anyway, this repository is a collection of scripts that include the functions I 
 
 ## Type: Strings
 
-### Java
+### Java [🔗source](/blob/main/java_string_related.js)
 
 | Package | Function | point | Type | Description |
 | --- | --- | --- | --- | --- |
 | java.lang.String | toString() | return | Analysis | Returns the representation of the string. |
 
-### Native(C Library)
+### Native(C Library) [🔗source](/blob/main/native_string_related.js)
 
 | Function | point | Type | Description |
 | --- | --- | --- | --- |
@@ -40,7 +40,7 @@ Anyway, this repository is a collection of scripts that include the functions I 
 
 ## Type: File
 
-### Native(C Library)
+### Native(C Library) [🔗source](/blob/main/native_file_related.js)
 
 | Function | point | Type | Description |
 | --- | --- | --- | --- |
@@ -50,9 +50,7 @@ Anyway, this repository is a collection of scripts that include the functions I 
 | int stat(const char *pathname, struct stat *statbuf); | char *pathname | Bypass | Retrieves the file status at the specified pathname. |
 | int lstat(const char *pathname, struct stat *statbuf); | char *pathname | Bypass | Retrieves the file status at the specified pathname, without following symbolic links. |
 
-[data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAQAAAAngNWGAAAA/0lEQVR4AYXNMSiEcRyA4cfmGHQbCZIipkuxnJgMStlMNmeyD2dwmc8+sZgxYJd9ErIZFHUyYYD7fkr6l4/rnvmtl7+KitrqV/fq2Y5eLY3Z9S48eRLe7BmVZ9qhTLhQ0algzZWQOVKSsCF8OjAnwbxDTWFDUhPK/jMr1H6HE/IqRky2DyvCefuwItwZzodVoYRiLqMkVCXrwpJ9twZ+sgfDYEFYl8wIWxZ9uFf7zkallxlJh4YrLGsKjZRx7VGHhLqwgFUN45DGdb8MeXGpgB4ABZdeDcpZEY51A+hyLKz4S1W4MQWm3AibWtgWmk6dyISa1pSdyWTOlLXVp0+eL9D/ZPfBTNanAAAAAElFTkSuQmCC](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAQAAAAngNWGAAAA/0lEQVR4AYXNMSiEcRyA4cfmGHQbCZIipkuxnJgMStlMNmeyD2dwmc8+sZgxYJd9ErIZFHUyYYD7fkr6l4/rnvmtl7+KitrqV/fq2Y5eLY3Z9S48eRLe7BmVZ9qhTLhQ0algzZWQOVKSsCF8OjAnwbxDTWFDUhPK/jMr1H6HE/IqRky2DyvCefuwItwZzodVoYRiLqMkVCXrwpJ9twZ+sgfDYEFYl8wIWxZ9uFf7zkallxlJh4YrLGsKjZRx7VGHhLqwgFUN45DGdb8MeXGpgB4ABZdeDcpZEY51A+hyLKz4S1W4MQWm3AibWtgWmk6dyISa1pSdyWTOlLXVp0+eL9D/ZPfBTNanAAAAAElFTkSuQmCC)
-
-## Type: Pcakge
+## Type: Pcakge [🔗source](/blob/main/java_package_related.js)
 
 | Package | Function | point | Type | Description |
 | --- | --- | --- | --- | --- |
