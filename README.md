@@ -25,13 +25,13 @@ Anyway, this repository is a collection of scripts that include the functions I 
 
 ## Type: Strings
 
-### Java [🔗source](/blob/main/java_string_related.js)
+### Java [🔗source](/java_string_related.js)
 
 | Package | Function | point | Type | Description |
 | --- | --- | --- | --- | --- |
 | java.lang.String | toString() | return | Analysis | Returns the representation of the string. |
 
-### Native(C Library) [🔗source](/blob/main/native_string_related.js)
+### Native(C Library) [🔗source](/native_string_related.js)
 
 | Function | point | Type | Description |
 | --- | --- | --- | --- |
@@ -40,7 +40,7 @@ Anyway, this repository is a collection of scripts that include the functions I 
 
 ## Type: File
 
-### Native(C Library) [🔗source](/blob/main/native_file_related.js)
+### Native(C Library) [🔗source](/native_file_related.js)
 
 | Function | point | Type | Description |
 | --- | --- | --- | --- |
@@ -50,7 +50,7 @@ Anyway, this repository is a collection of scripts that include the functions I 
 | int stat(const char *pathname, struct stat *statbuf); | char *pathname | Bypass | Retrieves the file status at the specified pathname. |
 | int lstat(const char *pathname, struct stat *statbuf); | char *pathname | Bypass | Retrieves the file status at the specified pathname, without following symbolic links. |
 
-## Type: Pcakge [🔗source](/blob/main/java_package_related.js)
+## Type: Pcakge [🔗source](/java_package_related.js)
 
 | Package | Function | point | Type | Description |
 | --- | --- | --- | --- | --- |
