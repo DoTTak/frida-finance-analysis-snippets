@@ -9,4 +9,4 @@ const ROOTING_PACKAGES = [
 
 const FRIDA_BINARIES = [
     "frida", "frida-agent", "re.frida.server", "linjector"
-]
+];
