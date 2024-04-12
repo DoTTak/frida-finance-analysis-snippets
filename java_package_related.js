@@ -12,7 +12,7 @@ PackageManager.getInstalledApplications.implementation = function (flags) {
     // for (var i = 0; i < apps.size(); i++) {
     //     var target = apps.get(i);
     //     var packageName = Java.use("android.content.pm.ApplicationInfo").$new(target).packageName.value;
-    //     if(ROOTING_PACKAGES.indexOf(packageName) > -1){
+    //     if(ROOTING_PACKAGES.indexOf(packageName) == -1){
     //         ArrayList.add(target);
     //     }
     // }
