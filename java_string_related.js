@@ -6,4 +6,10 @@ Java.performNow(function(){
         // retval = "FAKE"
         return retval;
     }
+
+    Java.use("java.lang.StringFactory").newStringFromCodePoints.implementation = function(a, b, c){
+        var retval = this.newStringFromCodePoints(a, b, c)
+        console.log("[*] java.lang.StringFactory.newStringFromCodePoints() >> " + retval);
+        return retval
+    }
 });
