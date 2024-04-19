@@ -28,6 +28,7 @@ Anyway, this repository is a collection of scripts that include the functions I 
 | Package | Function | point | Type | Description |
 | --- | --- | --- | --- | --- |
 | `java.lang.String` | `toString()` | return | Analysis | Returns the representation of the string. |
+| `java.lang.StringFactory` | `newStringFromCodePoints(int[] codePoints, int offset, int count)` | return | Analysis | Creates a string from the code point array. |
 
 ### Native(C Library) [🔗source](/native_string_related.js)
 
