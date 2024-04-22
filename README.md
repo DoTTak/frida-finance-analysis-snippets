@@ -49,10 +49,17 @@ Anyway, this repository is a collection of scripts that include the functions I 
 | `int stat(const char *pathname, struct stat *statbuf);` | `char *pathname` | Bypass | Retrieves the file status at the specified pathname. |
 | `int lstat(const char *pathname, struct stat *statbuf);` | `char *pathname` | Bypass | Retrieves the file status at the specified pathname, without following symbolic links. |
 
-## Type: Pcakge [🔗source](/java_package_related.js)
+## Type: Package [🔗source](/java_package_related.js)
 
 | Package | Function | point | Type | Description |
 | --- | --- | --- | --- | --- |
 | `android.app.ApplicationPackageManager` | `getInstalledApplications(int falgs)` | return | Bypass | Retrieves all installed applications on the device. |
 | `android.app.ApplicationPackageManager` | `getPackageInfo(String packageName, int flags)` | return | Bypass | Retrieves detailed information about the specified package. |
 | `android.app.ApplicationPackageManager` | `getApplicationInfo(String packageName, int flags)` | return | Bypass | Retrieves detailed data about a single app. |
+
+## Type: Reflection [🔗source](/java_reflect_related.js)
+
+| Package | Function | point | Type | Description |
+| --- | --- | --- | --- | --- |
+| `java.lang.Class` | `getDeclaredField(String name)` | `name` | Analysis | Retrieves a Field object that reflects the specified declared field of the class or interface. |
+| `java.lang.Class` | `forName(String className)` | `className` | Analysis | Returns the Class object associated with the class or interface with the given string name. |
