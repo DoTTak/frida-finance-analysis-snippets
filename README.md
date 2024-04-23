@@ -29,6 +29,7 @@ Anyway, this repository is a collection of scripts that include the functions I 
 | --- | --- | --- | --- | --- |
 | `java.lang.String` | `toString()` | return | Analysis | Returns the representation of the string. |
 | `java.lang.StringFactory` | `newStringFromCodePoints(int[] codePoints, int offset, int count)` | return | Analysis | Creates a string from the code point array. |
+| `java.util.regex.Pattern` | `matches(String regex, CharSequence input)` | return | Bypass | Checks if the input matches the given regular expression. |
 
 ### Native(C Library) [🔗source](/native_string_related.js)
 
@@ -36,6 +37,8 @@ Anyway, this repository is a collection of scripts that include the functions I 
 | --- | --- | --- | --- |
 | `char *strstr(const char *haystack, const char *needle);` | `char *needle` | Bypass, Analysis | Searches for the needle string in haystack and returns its location. |
 | `void *memmem(const void *haystack, size_t haystacklen, const void *needle, size_t needlelen);` | `void *needle` | Bypass, Analysis | Searches for the needle string in haystack and returns its location. |
+| `char *fgets(char *str, int n, FILE *stream);` | `char *str` | Bypass, Analysis | Reads a line from the specified stream and stores it into the string pointed to by str. |
+| `int snprintf(char *str, size_t size, const char *format, ...);` | `char *str` | Analysis | Writes formatted output to a string. |
 
 ## Type: File
 
