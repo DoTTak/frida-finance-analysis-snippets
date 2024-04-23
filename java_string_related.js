@@ -14,4 +14,12 @@ Java.performNow(function(){
         // retval = "FAKE"
         return retval
     }
+    
+    Java.use("java.util.regex.Pattern").matches.implementation = function (regex, input) {
+        var retval = this.matches(regex, input)
+        console.log("[*] java.util.regex.Pattern.matches("+ regex +", "+ input +") >> " + retval);
+        /* If you want to change result, use the code below. */
+        // retval = false // or true
+        return retval
+    }
 });
