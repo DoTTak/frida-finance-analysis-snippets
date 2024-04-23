@@ -29,3 +29,35 @@ Interceptor.attach(Module.findExportByName(null, "memmem"), {
         }
     }
 });
+
+Interceptor.attach(Module.findExportByName(null, "fgets"), {
+    onEnter: function (args) {
+        this.str = args[0]
+        this.num = args[1]
+        this.file = args[2]
+    },
+    onLeave: function (retval) {
+        var str = Memory.readUtf8String(this.str)
+        if (str != null) {
+            console.log("[*] fgets() >> " + str)
+            /* If you want to change result, use the code below. */
+            // Memory.writeUtf8String(this.string, "FAKE")
+        }
+    }
+});
+
+Interceptor.attach(Module.findExportByName(null, "snprintf"), {
+    onEnter: function (args) {
+        this.buffer = args[0]
+        this.size = args[1]
+        this.format = args[2]
+    },
+    onLeave: function (retval) {
+        var buffer = Memory.readUtf8String(this.buffer)
+        console.log("[*] snprintf() >> " + buffer)
+        if (buffer != null) {
+            /* If you want to change result, use the code below. */
+            // Memory.writeUtf8String(this.buffer, "FAKE")
+        }
+    }
+})
