@@ -54,8 +54,8 @@ Interceptor.attach(Module.findExportByName(null, "snprintf"), {
     },
     onLeave: function (retval) {
         var buffer = Memory.readUtf8String(this.buffer)
-        console.log("[*] snprintf() >> " + buffer)
         if (buffer != null) {
+            console.log("[*] snprintf() >> " + buffer)
             /* If you want to change result, use the code below. */
             // Memory.writeUtf8String(this.buffer, "FAKE")
         }
