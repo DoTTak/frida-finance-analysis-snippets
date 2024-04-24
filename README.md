@@ -31,7 +31,7 @@ Anyway, this repository is a collection of scripts that include the functions I 
 | `java.lang.StringFactory` | `newStringFromCodePoints(int[] codePoints, int offset, int count)` | return | Analysis | Creates a string from the code point array. |
 | `java.util.regex.Pattern` | `matches(String regex, CharSequence input)` | return | Bypass | Checks if the input matches the given regular expression. |
 | `java.lang.System` | `getenv()` | return | Bypass | Retrieves the value of an environment variable. |
-| `java.lang.Runtime` |	`exec(String command)` | `String command` | Bypass	Executes the specified system command. |
+| `java.lang.Runtime` |	`exec(String command)` | `String command` | Bypass | Executes the specified system command. |
 
 ### Native(C Library) [🔗source](/native_string_related.js)
 
