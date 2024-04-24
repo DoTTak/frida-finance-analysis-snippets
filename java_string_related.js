@@ -22,4 +22,30 @@ Java.performNow(function(){
         // retval = false // or true
         return retval
     }
+
+    Java.use("java.lang.System").getenv.overload().implementation = function(){
+        var retval = this.getenv()
+        console.log("[*] System.getenv() >> ")
+        var iterator = retval.keySet().iterator()
+        while(iterator.hasNext()){
+            var key = iterator.next();
+            console.log(key + "=" + retval.get(key))
+        }
+        /* If you want to change result, use the code below. */
+        // var HashMap = Java.use('java.util.HashMap').$new();
+        // var Object = Java.use("java.lang.Object");
+        // var String = Java.use("java.lang.String")
+        // HashMap.put("FAKE_KEY_1", Java.cast(String.$new("FAKE_VALUE_1"), Object))
+        // HashMap.put("FAKE_KEY_2", Java.cast(String.$new("FAKE_VALUE_2"), Object))
+        // retval = HashMap
+        return retval
+    }
+    
+    Java.use("java.lang.Runtime").exec.overload('java.lang.String').implementation = function(command){
+        /* If you want to change arguments, use the code below. */
+        // command = "fake"
+        var retval = this.exec(command)
+        console.log("[*] Runtime.exec("+command+")")
+        return retval
+    }
 });
