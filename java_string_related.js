@@ -48,4 +48,12 @@ Java.performNow(function(){
         console.log("[*] Runtime.exec("+command+")")
         return retval
     }
+
+    Java.use("java.lang.String").split.overload('java.lang.String').implementation = function(regex){
+        /* If you want to change arguments, use the code below. */
+        // regex = " "
+        var retval = this.split(regex)
+        console.log("[*] java.lang.split("+regex+") >> " + retval)
+        return retval
+    }
 });
