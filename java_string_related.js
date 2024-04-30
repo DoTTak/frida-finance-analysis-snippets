@@ -56,4 +56,12 @@ Java.performNow(function(){
         console.log("[*] java.lang.split("+regex+") >> " + retval)
         return retval
     }
+
+    Java.use("java.io.BufferedReader").readLine.overload().implementation = function(){
+        var retval = this.readLine()
+        console.log("[*] java.io.BufferedReader.readLine() >> " + retval);
+        /* If you want to change result, use the code below. */
+        // retval = "Fake"
+        return retval
+    }
 });
