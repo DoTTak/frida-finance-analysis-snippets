@@ -12,19 +12,24 @@ Java.perform(function () {
     var reader = BufferedReader.$new.call(BufferedReader, fileReader);
 
     var data = null;
+    var is_save = false;
+    var file_path = "/data/data/"+PACKAGE_NAME+"/dump_" + LIB_NAME; // recommend creating a folder in advance to store files in the app directory.
     while ((data = reader.readLine()) != null) {
         if (data.indexOf(PACKAGE_NAME) > -1 && data.indexOf(LIB_NAME) > -1) {
-            is_next_catch = true;
             console.log("[*] dumping...", data);
             var addr = data.split(" ")[0].split("-");
             var start = parseInt("0x" + addr[0], 16);
             var end = parseInt("0x" + addr[1], 16);
             
-            // recommend creating a folder in advance to store files in the app directory.
-            var file = new File("/data/data/"+PACKAGE_NAME+"/dump_" + LIB_NAME, "ab");
+            var file = new File(file_path, "ab");
             file.write(Memory.readByteArray(ptr(start), end - start));
             file.flush();
             file.close();
+
+            is_save = true
         };
     };
+    if(is_save){
+        console.log("[*] Save Complete >> " + file_path)
+    }
 });
