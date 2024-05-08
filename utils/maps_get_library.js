@@ -1,5 +1,6 @@
-var PACKAGE_NAME = ""
-var LIB_NAME = ""
+// Modify the code below
+var PACKAGE_NAME = "com.example.app"
+var LIB_NAME = "libDetect.so"
 
 Java.perform(function () {
     const aFile = Java.use('java.io.File');
@@ -18,7 +19,8 @@ Java.perform(function () {
             var addr = data.split(" ")[0].split("-");
             var start = parseInt("0x" + addr[0], 16);
             var end = parseInt("0x" + addr[1], 16);
-
+            
+            // recommend creating a folder in advance to store files in the app directory.
             var file = new File("/data/data/"+PACKAGE_NAME+"/dump_" + LIB_NAME, "ab");
             file.write(Memory.readByteArray(ptr(start), end - start));
             file.flush();
