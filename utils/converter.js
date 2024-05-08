@@ -22,7 +22,7 @@ function bin2String(array) {
 }
 /**
  * Example)
- * bin2Hex(string2Bin("Hello"))
+ * bin2HexArr(string2Bin("Hello"))
  * >> ['48','65','6C','6C','6F']
  */
 function bin2HexArr(array) {
