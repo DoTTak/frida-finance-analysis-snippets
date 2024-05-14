@@ -42,6 +42,7 @@ Anyway, this repository is a collection of scripts that include the functions I 
 | `void *memmem(const void *haystack, size_t haystacklen, const void *needle, size_t needlelen);` | `void *needle` | Bypass, Analysis | Searches for the needle string in haystack and returns its location. |
 | `char *fgets(char *str, int n, FILE *stream);` | `char *str` | Bypass, Analysis | Reads a line from the specified stream and stores it into the string pointed to by str. |
 | `int snprintf(char *str, size_t size, const char *format, ...);` | `char *str` | Analysis | Writes formatted output to a string. |
+| `FILE *popen(const char *command, const char *type);` | `char *command` | Bypass, Analysis | Executes the given command and returns a file pointer that can read the result. |
 
 ## Type: File
 

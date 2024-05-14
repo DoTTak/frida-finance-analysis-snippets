@@ -61,3 +61,18 @@ Interceptor.attach(Module.findExportByName(null, "snprintf"), {
         }
     }
 })
+
+Interceptor.attach(Module.findExportByName(null, "popen"), {
+    onEnter: function (args) {
+        var command = Memory.readUtf8String(args[0])
+        var type = Memory.readUtf8String(args[1])
+        console.log("[*] popen("+command+", "+type+")")
+        /* If you want to change arguments, use the code below. */
+        // var change_str = "FAKE"
+        // var newCommand = Memory.alloc(change_str.length)
+        // Memory.writeUtf8String(newCommand, change_str)
+        // args[0] = newCommand
+    },
+    onLeave: function (retval) {
+    }
+})
