@@ -84,6 +84,35 @@ In case the app is terminated due to anti-detection (for instance, rooting or Fr
 
 </details>
 
+## android_widget.js [🔗source](/utils/android_widget.js)
+This is a script for hooking functions related to the text of Android widgets. With this script, it is possible to collect, change, or delete the text displayed on the screen. (However, this only applies when using widgets.)
+<details>
+<summary>Example Code</summary>
+
+### Console
+```sh
+$ frida -f com.android.settings -l android_widget.js # Run
+# ...
+[*] TextView.setText.overloads[0](Notifications, ...)
+[*] TextView.setText.overloads[3](Block, allow, prioritize, ...)
+[*] TextView.setText.overloads[4](Block, allow, prioritize, ...)
+[*] TextView.setText.overloads[0](Block, allow, prioritize, ...)
+[*] TextView.setText.overloads[3](Connections, ...)
+[*] TextView.setText.overloads[4](Connections, ...)
+[*] TextView.setText.overloads[0](Connections, ...)
+[*] TextView.setText.overloads[3](Wi-Fi, Bluetooth, Data usage, Airplane mode, ...)
+[*] TextView.setText.overloads[4](Wi-Fi, Bluetooth, Data usage, Airplane mode, ...)
+[*] TextView.setText.overloads[0](Wi-Fi, Bluetooth, Data usage, Airplane mode, ...)
+[*] TextView.setText.overloads[3](Sounds and vibration, ...)
+[*] TextView.setText.overloads[4](Sounds and vibration, ...)
+[*] TextView.setText.overloads[0](Sounds and vibration, ...)
+[*] TextView.setText.overloads[3](Sound mode, Ringtone, Volume, ...)
+[*] TextView.setText.overloads[4](Sound mode, Ringtone, Volume, ...)
+[*] TextView.setText.overloads[0](Sound mode, Ringtone, Volume, ...)
+```
+
+</details>
+
 ## backtrace.js [🔗source](/utils/backtrace.js)
 Frida provides a feature to print the backtrace of Java and Native code.
 - `backtraceJava()` function: This function retrieves the current stack trace using Java's `android.util.Log.getStackTraceString` method. This information is used as input by creating a new `java.lang.Exception`. Then this function prints the backtrace information to the console.
