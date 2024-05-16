@@ -10,7 +10,7 @@ Java.use("android.app.Activity").finish.overload().implementation = function () 
 
 Java.use("android.os.Process").killProcess.implementation = function (pid) {
     console.log("[*] Process.killProcess(" + pid + ")")
-    this.killProcess()
+    this.killProcess(pid)
 }
 
 Interceptor.attach(Module.findExportByName(null, "exit"), function(args){
