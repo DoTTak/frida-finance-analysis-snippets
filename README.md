@@ -1,6 +1,6 @@
-# Frida-Snippets
+# Frida finance analysis snippets
 
-Frida snippets for bypassing or analyzing anti-detection of Android financial applications
+Frida finance analysis snippets for bypassing or analyzing anti-detection of Android financial applications
 
 # Description
 
