@@ -1,6 +1,6 @@
-Java.use("java.lang.System").exit.implementation = function () {
-    console.log("[*] System.exit()")
-    this.exit()
+Java.use("java.lang.System").exit.implementation = function (status) {
+    console.log("[*] System.exit("+status+")")
+    this.exit(status)
 }
 
 Java.use("android.app.Activity").finish.overload().implementation = function () {
