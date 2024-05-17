@@ -34,6 +34,8 @@ Anyway, this repository is a collection of scripts that include the functions I 
 | `java.lang.Runtime` |	`exec(String command)` | `String command` | Bypass | Executes the specified system command. |
 | `java.lang.String` |	`split(String regex)` | `String regex` | Analysis | Splits this string around matches of the given regular expression. |
 | `java.io.BufferedReader` | `readLine()` | return | Bypass, Analysis | Reads a line of text from the input stream. |
+| `java.lang.String` | `format(String format, Object... args)` | return | Bypass, Analysis | Formats a string using provided arguments. |
+
 ### Native(C Library) [🔗source](/native_string_related.js)
 
 | Function | point | Type | Description |

@@ -64,4 +64,12 @@ Java.performNow(function(){
         // retval = "Fake"
         return retval
     }
+
+    Java.use("java.lang.String").format.overload('java.lang.String', '[Ljava.lang.Object;').implementation = function(format, args){
+        var retval = this.format(format, args)
+        console.log("[*] String.format("+format+", "+args.join(", ")+")")
+        /* If you want to change result, use the code below. */
+        // retval = "Fake"
+        return retval
+    }
 });
