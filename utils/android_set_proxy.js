@@ -13,7 +13,7 @@ Java.use("java.lang.System").getProperty.overloads[1].implementation = function 
     if(key.toLowerCase().indexOf("proxyhost") > -1 ){
         retval = PROXY_HOST;
         console.log("[*] System.getProperty("+key+", "+def+") >> " + retval)
-    } else if (key.toLowerCase().indexOf("proxyport")){
+    } else if (key.toLowerCase().indexOf("proxyport") > -1 ){
         retval = PROXY_PORT;
         console.log("[*] System.getProperty("+key+", "+def+") >> " + retval)
     }
