@@ -75,6 +75,24 @@ Anyway, this repository is a collection of scripts that include the functions I 
 
 # Utils
 
+## android_set_proxy.js [🔗source](/utils/android_set_proxy.js)
+Normally, when setting up a Proxy server, you specify the Host and Port of the Proxy server through the network settings of the Android settings app. However, with this script, you can set up a Proxy without those settings.
+
+However, if SSL Pinning is enabled, communication through the proxy server may not be possible.
+<details>
+<summary>Example Code</summary>
+
+### Console
+```sh
+$ frida -f com.android.vending -l android_set_proxy.js # Run
+
+[*] System.getProperty(https.proxyHost, null) >> 192.168.2.176
+[*] System.getProperty(https.nonProxyHosts, null) >> 192.168.2.176
+[*] System.getProperty(https.proxyPort, null) >> 8080
+```
+
+</details>
+
 ## android_terminate.js [🔗source](/utils/android_terminate.js)
 In case the app is terminated due to anti-detection (for instance, rooting or Frida) after executing the app, scripts that have hooked app termination-related functions
 <details>
