@@ -396,6 +396,33 @@ $ adb shell su -c ls -al /data/data/com.example.app/dump_libDetect.so
 
 </details>
 
+## memory_dump.js [🔗source](/utils/memory_dump.js)
+Dump memory from a given address to a file.
+<details>
+<summary>Example Code</summary> 
+
+### Javascript
+```js
+dumpMemory('0x77070a3000', 0x100, '/data/data/com.example.app/dump.bin', false);
+dumpMemory('0x77070a3000', 0x100, '/data/data/com.example.app/dump.txt', true);
+```
+
+### Console
+```sh
+[*] Memory dumped to /data/data/com.example.app/dump.bin
+[*] Memory dumped to /data/data/com.example.app/dump.txt
+
+$ adb shell su -c cat /data/data/com.example.app/dump.bin
+eG��R�����ri)��{���_�������W��O��{��C�T�;Ո@�������dB��@9�
+
+$ adb shell su -c cat /data/data/com.example.app/dump.txt
+             0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F  0123456789ABCDEF
+77070a3000  fd 7b bf a9 fd 03 00 91 e0 04 80 52 71 fd ff 97  .{.........Rq...
+77070a3010  a8 0d 00 d0 08 65 47 f9 89 02 9b 52 09 86 a5 72  .....eG....R...r
+```
+
+</details>
+
 ## native_library_attach.js [🔗source](/utils/native_library_attach.js)
 This is a script that hooks functions (dlopen, android_dlopen_ext) used when dynamically loading library files. Through this script, you can attach an Interceptor to a specific offset or symbol targeting dynamically loaded libraries.
 <details>
